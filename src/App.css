@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,57 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
+.Welcome {
+  animation: fade-in 4s;
+}
+
+.LowerWelcome {
+  animation: fade-in 6s;
+}
+
+nav {
+  animation: fade-in 8s;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 0.5rem;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+@keyframes fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
