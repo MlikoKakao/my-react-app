@@ -10,7 +10,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 
 function AppContent() {
-  const location = useLocation(); // ✅ safe here!
+  const location = useLocation();
   const currentPath = location.pathname;
 
   return (
@@ -34,7 +34,6 @@ function AppContent() {
           <p>Welcome to my interactive CV.</p>
         </div>
 
-        {/* Navigation with conditional classes */}
         <nav>
           <Link
             to="/"
