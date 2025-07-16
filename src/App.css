@@ -99,6 +99,7 @@ h3 {
   display: inline-block;
   transition: transform 0.2s ease;
   color: inherit;
+  margin-bottom: 40px;
 }
 
 h3:hover {
@@ -125,18 +126,18 @@ h3:hover::after {
   left: 100%;
   top: 0;
   opacity: 0;
-  transform: translateX(-40px);
-  transform: translateY(-50px);
-  animation: slideIn 0.4s ease forwards;
+  transform: translateX(-20px);
+  transform: translateY(100px);
+  animation: slideInInfo 0.4s ease forwards;
   white-space: nowrap;
   padding-left: 1rem;
 }
 
-@keyframes slideIn {
+@keyframes slideInInfo {
   to {
     opacity: 1;
-    transform: translateX(-40px);
-    transform: translateY(-30px);
+    transform: translateX(-20px);
+    transform: translateY(0.5rem);
   }
 }
 
@@ -146,8 +147,49 @@ h3:hover::after {
   top: 0;
   opacity: 0;
   transform: translateX(0px);
-  transform: translateY(-50px);
-  animation: slideIn 0.4s ease forwards;
+  transform: translateY(100px);
+  animation: slideInLine 0.4s ease forwards;
   white-space: nowrap;
   padding-left: 1rem;
+}
+
+@keyframes slideInLine {
+  to {
+    opacity: 1;
+    transform: translateX(-40px);
+    transform: translateY(-20px);
+  }
+}
+
+.education-info p,
+.detail-edu p {
+  margin: 0;
+}
+.education-info,
+.detail-edu {
+  padding: 0;
+}
+
+.detail-edu {
+  font-size: medium;
+}
+
+.interest-info {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  opacity: 0;
+  transform: translateX(0px);
+  transform: translateY(100px);
+  animation: slideInEdu 0.4s ease forwards;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+@keyframes slideInEdu {
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+    transform: translateY(55px);
+  }
 }
